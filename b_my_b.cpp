@@ -8,20 +8,34 @@ public:
     explicit ct();
     ~ct();
     
-    short* shr = new short; signed short one {10};
+    short* shr = new short[3]; 
+    short one[3] {7, 9, 3};
+    
+    
     
     inline bool b_my_b() {
-        unsigned r; short* k; short b =100; k = &b;
-        return r = (*shr > *k) ? true : false;
+        shr++;
+        
+        return (*shr > 8) ? true : false;
     }
 };
 
 int main(){
+    short arr[] {5, 7, 9};
+    
+    short *i = new short[3];
+    
+    i = arr;
+    
+    
     ct* d = new ct;
     
-    short* i = new short; short b = 100; i = &b;
-
-    if (*d->shr++ < *i) cout << *d->shr << "\n" << d->b_my_b() << endl;
+    
+    if (*++i > 6) cout << *i << endl;
+    
+    if (d->b_my_b())
+        cout << "b = " << 1 << endl;
+        
     
     delete[] d;
     return 0;
@@ -29,7 +43,7 @@ int main(){
 
 ct::ct()
 {
-    shr = &one;
+    shr = one;
 }
 ct::~ct()
 {
