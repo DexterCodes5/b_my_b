@@ -11,25 +11,18 @@ public:
     short* shr = new short[3]; 
     short one[3] {7, 9, 3};
     
-    
-    
     inline bool b_my_b() {
         shr++;
-        
         return (*shr > 8) ? true : false;
     }
 };
 
 int main(){
     short arr[] {5, 7, 9};
-    
     short *i = new short[3];
-    
     i = arr;
     
-    
     ct* d = new ct;
-    
     
     if (*++i > 6) cout << *i << endl;
     
