@@ -29,8 +29,8 @@ int main(){
     if (d->b_my_b())
         cout << "b = " << 1 << endl;
         
-    
-    delete[] d;
+    delete[] i;
+    delete d;
     return 0;
 }
 
